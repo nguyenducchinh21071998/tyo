@@ -13,3 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 Route::get('/', 'App\Http\Controllers\UserController@index');
+
+
+Route::get('/login', 'App\Http\Controllers\AuthManager@login');
+Route::post('/login', 'App\Http\Controllers\AuthManager@loginPost');
+Route::post('/create', 'App\Http\Controllers\UserController@createUser');
